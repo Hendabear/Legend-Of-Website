@@ -1,5 +1,5 @@
 .clearfix { @include clearfix; }
-.strong { font-weight: bold; }
+.strong { font-weight: $fw-bold; }
 .f-right { float: right; }
 .f-left { float: left; }
 

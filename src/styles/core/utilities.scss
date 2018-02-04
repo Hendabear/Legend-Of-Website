@@ -1,1 +1,12 @@
 .clearfix { @include clearfix; }
+.strong { font-weight: bold; }
+.f-right { float: right; }
+.f-left { float: left; }
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}

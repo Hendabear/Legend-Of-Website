@@ -1,0 +1,9 @@
+.btn {
+  &:hover{
+    cursor: pointer;
+  }
+  &--transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}

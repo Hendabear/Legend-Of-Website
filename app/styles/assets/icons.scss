@@ -1,0 +1,14 @@
+$icn-base: $base * 2.5;
+
+.icn{
+  display: inline-block;
+  background-repeat: no-repeat;
+
+  width: $icn-base;
+  height: $icn-base;
+
+  &--search {
+    background-image: url('/icons/icn-search.svg');
+  }
+}
+

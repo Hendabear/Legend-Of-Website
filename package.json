@@ -6,7 +6,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",
-    "react-scripts": "git@github.com:rrichardsonv/react-scripts.git"
+    "rrichardsonv-react-scripts": "git@github.com:rrichardsonv/react-scripts.git"
   },
   "scripts": {
     "start": "react-scripts start",

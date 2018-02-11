@@ -7,12 +7,12 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",
-    "rrichardsonv-react-scripts": "git@github.com:rrichardsonv/react-scripts.git"
+    "react-scripts": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "lint": "react-scripts lint"
+    "eject": "react-scripts eject"
   }
 }

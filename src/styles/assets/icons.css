@@ -1,0 +1,16 @@
+.icn{
+  display: inline-block;
+  background-repeat: no-repeat;
+
+  width: var(--icn-base);
+  height: var(--icn-base);
+}
+
+.icn--search {
+  background-image: url('/icons/icn-search.svg');
+}
+
+.icn--hamburger {
+  background-image: url('/icons/icn-hamburger.svg');
+}
+

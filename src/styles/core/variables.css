@@ -1,0 +1,70 @@
+/* Global variables */
+:root {
+  --base: 8px;
+  --half-base: 4px;
+  --quarter-base: 2px;
+  --one-and-half-base: 12px;
+  --base-2: 16px;
+  --base-3: 24px;
+  --base-4: 32px;
+
+  --icn-base: var(--base-2);
+
+  --base-line-height: 1.5;
+  --base-font-size: var(--base-2);
+  --font-family-primary: "Segoe UI",
+                          Roboto,
+                          Oxygen-Sans,
+                          Ubuntu,
+                          Arial,
+                          sans-serif;
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --color-white: #fff;
+  --color-white-1: #e9e8e3;
+  --color-white-2: #e9f0fb;
+
+  --color-gray-1: #ccc;
+  --color-gray-2: #b6c8d6;
+  --color-gray-3: #7c6b90;
+  --color-gray-4: #3d393a;
+
+  --color-black: #1d1c1b;
+
+  --color-blue-1: #54aee3;
+  --color-blue-2: #427eec;
+  --color-blue-3: #3c63aa;
+  --color-blue-4: #284c66;
+  --color-blue-5: #203c51;
+  --color-blue-6: #132a3c;
+
+  --color-red-1: #fb4769;
+  --color-red-2: #fb6682;
+  --color-red-3: #fc8fa4;
+
+  
+  --color-yellow: #f1e68b;
+
+  --color-green-1: #2b904b;
+
+
+  --color-primary: var(--color-yellow);
+
+  --body-bgcolor: var(--color-white);
+  --color-body-text: var(--color-gray-3);
+  --font-family-text: var(--font-family-primary);
+  --default-border-color: var(--color-gray-1);
+  --default-border-radius: 3px;
+
+  --default-btn-color: var(--color-red-1);
+  --primary-btn-color: var(--color-primary);
+
+  --secondary-btn-color: var(--color-blue-6);
+  --color-disabled: var(--color-gray-2);
+
+  --header-height: 64px;
+}

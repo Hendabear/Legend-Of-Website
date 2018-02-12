@@ -6,9 +6,11 @@
 @import 'layout/page-layout.css';
 @import 'modules/button.css';
 @import 'modules/nav.css';
+@import 'modules/social-links.css';
+@import 'modules/cards.css';
 @import 'core/utilities.css';
 
-.content-container {
+/* .content-container {
   display: grid;
   grid-template-rows: 2fr 1fr 3fr 3fr;
 
@@ -17,14 +19,14 @@
         "subscribe",
         "episodes",
         "hosts"
-}
+} */
 
 .content-container > div {
   width: 100%;
   min-height: 100px;
 }
 
-.header {
+/* .header {
   grid-area: 'header';
 }
 
@@ -38,4 +40,4 @@
 
 .hosts {
   grid-area: 'hosts';
-}
+} */

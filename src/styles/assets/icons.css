@@ -6,6 +6,11 @@
   height: var(--icn-base);
 }
 
+.icn--lg {
+  width: calc(var(--icn-base) * 2);
+  height: calc(var(--icn-base) * 2);
+}
+
 .icn--search {
   background-image: url('/icons/icn-search.svg');
 }
@@ -14,3 +19,26 @@
   background-image: url('/icons/icn-hamburger.svg');
 }
 
+.icn--facebook {
+  background-image: url('/icons/icn-facebook.svg');
+}
+
+.icn--itunes {
+  background-image: url('/icons/icn-itunes.svg');
+}
+
+.icn--stitcher {
+  background-image: url('/icons/icn-stitcher.svg');
+}
+
+.icn--tumblr {
+  background-image: url('/icons/icn-tumblr.svg');
+}
+
+.icn--soundcloud {
+  background-image: url('/icons/icn-soundcloud.svg');
+}
+
+.icn--spotify {
+  background-image: url('/icons/icn-spotify.svg');
+}

@@ -1,0 +1,22 @@
+ul.social-links {
+    margin: 0 0 var(--base-3);
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.social-links > li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 var(--one-and-half-base);
+    vertical-align: top;
+}
+
+.social-links > li > a {
+    text-decoration: none;
+}
+
+.social-links > li > a:hover {
+    text-decoration: none;
+}

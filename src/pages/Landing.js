@@ -1,65 +1,62 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SocialLinks from '../molecules/SocialLinks';
 import Nav from '../organisms/Nav';
-import logo from '../LoW_assets/logo_150.gif';
-
-const navLinks = [
-  { title: 'Episodes' },
-  { title: 'Archive' },
-  { title: 'About Us' },
-  { title: 'Blog' },
-];
+import Banner from '../organisms/Banner';
+import Deck from '../molecules/Deck';
+import logoSmall from '../LoW_assets/logo_150.gif';
+import {
+  PORTAL_CAST_SUBSCRIBE_LINKS,
+  PORTAL_CAST_NAV_LINKS,
+} from '../utils/constants';
 
 const Landing = (props) => {
   return (
     <div>
       <div className="page">
         <Nav
-          links={navLinks}
-          logo={<img src={logo} />}
+          links={PORTAL_CAST_NAV_LINKS}
+          logo={<img src={logoSmall} />}
         />
         <div className="page-content content-container">
-          <div className="header">
-            <blockquote style={{ backgroundColor: '#ccc', maxWidth: '50%', minHeight: '100%', margin: '0 auto', padding: '8px', borderRadius: '4px' }}>
-              Avatar: The Last Airbender is a show that affected me deeply and stuck with me over the years." That’s something we’ve heard from countless people of all ages since the show aired in 2005.
-              <br /><br />
-              The Legend of Portalcast is a reunion of hosts from the podcast Portalcast that was started over 10 years ago when Avatar: The Last Airbender was airing on Nickelodeon. We all became friends through the Avatar fan forums or connected in person and shared our intellectual, prophetical, and humorous opinions.
-              <br /><br />
-              In this new podcast, we revisit themes, characters, and episodes from the original series and reflect on how the show has shaped us—from raising kids, to starting businesses, to dealing with loss and grief, Avatar: The Last Airbender has been the common thread.
-            </blockquote>
+          <Banner />
+          <div style={{
+            width: '50%',
+            textAlign: 'center',
+            margin: '1em auto',
+            border: '1px solid black',
+          }} className="card">
+            <h2 style={{ color: 'black' }}>Subscribe</h2>
+            <SocialLinks links={PORTAL_CAST_SUBSCRIBE_LINKS} />
           </div>
-          <div className="subscribe">
-            <div className="content-top">
-              <h1 style={{ margin: '0 auto', textAlign: 'center' }}>Subscribe</h1>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridColumnGap: '32px', padding: '16px 48px', margin: '0 10%' }}>
-              <button style={{ height: '100%' }} className="btn btn--secondary">iTunes</button>
-              <button style={{ height: '100%' }} className="btn btn--secondary">Souncloud</button>
-              <button style={{ height: '100%' }} className="btn btn--secondary">Stitcher</button>
-            </div>
-          </div>
-          <div className="episodes">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridColumnGap: '32px', padding: '1rem' }}>
-              {["http://lorempixel.com/output/abstract-q-c-200-200-6.jpg",
-                "http://lorempixel.com/output/abstract-q-c-200-200-2.jpg",
-                "http://lorempixel.com/output/abstract-q-c-200-200-4.jpg"].map((url) => {
-                  return (
-                    <div>
-                      <div style={{ textAlign: 'center' }}>
-                        <img style={{ margin: '0 auto' }} src={url} />
-                      </div>
-                      <div>
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&show_artwork=false">
-                        </iframe>
-                      </div>
+          <Deck
+            className="episodes"
+            cards={["http://lorempixel.com/output/abstract-q-c-200-200-6.jpg",
+              "http://lorempixel.com/output/abstract-q-c-200-200-2.jpg",
+              "http://lorempixel.com/output/abstract-q-c-200-200-4.jpg"].map((url, i) => {
+                return (selected, handleToggle) => (
+                  <div>
+                    <div
+                      onClick={() => handleToggle(url)}
+                      style={{
+                        textAlign: 'center',
+                        backgroundImage: `url(${url})`,
+                        width: '100%',
+                        backgroundRepeat: 'no-repeat',
+                        height: '13em',
+                        backgroundSize: 'cover',
+                      }} />
+                    <div style={{ maxHeight: '100px', backgroundColor: 'var(--color-white-1)' }}>
+                      {url !== selected && <p><strong>S1E1</strong><br />Meow meow meow meow meow <br />meow meow meow meow meow</p>}
+                      <iframe style={selected == url ? {} : { display: 'none' }} width="100%" height="100" scrolling="no" frameborder="no"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&show_artwork=false">
+                      </iframe>
                     </div>
-                  );
-                })
-              }
-            </div>
-            <div style={{ float: 'right', padding: '1em' }}><button style={{ height: '100%' }} className="btn btn--default">Archive</button></div>
-          </div>
+                  </div>
+                );
+              })}
+          />
+          <div style={{ textAlign: 'center' }}><button style={{ height: '100%' }} className="btn btn--default">Archive</button></div>
           <div className="hosts">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridColumnGap: '1em', padding: '1rem' }}>
               {["http://lorempixel.com/output/cats-q-c-200-200-4.jpg",
